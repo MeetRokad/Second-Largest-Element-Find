@@ -1,0 +1,28 @@
+//Time Complexity : O(n*n)=O(n^2)
+//Space Complexity : O(1)
+class que4 
+{
+    public static void main(String []args)
+    {
+        int a[]={31,21,56,65,43};
+        int n=a.length;
+
+        //ascending order sort logic
+        for(int i=0;i<n;i++)
+        {
+            for(int j=i;j<n;j++)
+            {
+                if(a[i]>a[j])
+                {
+                    int temp=a[i];
+                    a[i]=a[j];
+                    a[j]=temp;
+                }
+                
+            }
+            System.out.println(a[i]);//ascending order
+        }
+        
+        System.out.println("Second Largest Array is : "+a[n-2]);
+    }    
+}
